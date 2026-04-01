@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Практика CSS</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #555;
+        }
+
+        img {
+            margin-top: 20px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Мой рисунок</h1>
+
+    <p>Ниже показана картинка smale.png:</p>
+
+    <img src="smale.png" width="100" height="100" alt="Рисунок">
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Smile</title>
+</head>
+<body>
+
+<canvas id="c" width="200" height="200"></canvas>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+// лицо
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(100, 100, 80, 0, Math.PI * 2);
+ctx.fill();
+ctx.strokeStyle = "black";
+ctx.lineWidth = 6;
+ctx.stroke();
+
+// левый глаз
+ctx.fillStyle = "white";
+ctx.beginPath();
+ctx.ellipse(70, 80, 25, 18, 0, 0, Math.PI * 2);
+ctx.fill();
+ctx.stroke();
+
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.arc(75, 80, 4, 0, Math.PI * 2);
+ctx.fill();
+
+// правый глаз
+ctx.fillStyle = "white";
+ctx.beginPath();
+ctx.ellipse(120, 80, 25, 18, 0, 0, Math.PI * 2);
+ctx.fill();
+ctx.stroke();
+
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.arc(125, 80, 4, 0, Math.PI * 2);
+ctx.fill();
+
+// рот
+ctx.beginPath();
+ctx.arc(100, 120, 35, 0.2 * Math.PI, 0.8 * Math.PI);
+ctx.stroke();
+</script>
+
+</body>
+</html>
